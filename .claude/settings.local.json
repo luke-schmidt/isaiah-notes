@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(ls:*)",
+      "Bash(brew list:*)",
+      "Bash(find:*)",
+      "Bash(brew install:*)",
+      "Bash(brew uninstall:*)",
+      "Bash(source:*)",
+      "Bash(export:*)",
+      "Bash(./build-template.sh:*)",
+      "Bash(echo:*)",
+      "Bash(pdflatex:*)",
+      "Bash(pdf2svg:*)",
+      "Bash(/usr/local/texlive/2025/bin/universal-darwin/pdflatex -output-directory=templates/output templates/bible-study-template.tex)",
+      "Bash(/usr/local/texlive/2025/bin/universal-darwin/pdflatex border-test.tex)",
+      "Bash(./build.sh)",
+      "Bash(rm:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(pdftoppm:*)",
+      "Bash(sed:*)",
+      "Bash(magick convert:*)",
+      "Bash(cp:*)",
+      "Bash(xelatex:*)",
+      "Bash(mv:*)",
+      "Bash(perl:*)",
+      "Bash(convert:*)",
+      "Bash(magick:*)",
+      "Bash(git init:*)",
+      "Bash(touch:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

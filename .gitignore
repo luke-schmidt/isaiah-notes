@@ -1,0 +1,56 @@
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+
+# LaTeX temporary files
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+
+# Output directories - keep structure but ignore PDFs
+output/*.pdf
+output/*.png
+chapters/*/output/
+chapters/*/*.pdf
+chapters/*/*.aux
+chapters/*/*.log
+chapters/*/*.synctex.gz
+
+# macOS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor files
+*~
+.vscode/
+.idea/
+*.code-workspace
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
