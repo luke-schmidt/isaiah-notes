@@ -1,0 +1,39 @@
+% Isaiah Bible Study Formatting Commands
+% Text formatting utilities for biblical analysis
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{formatting}[2025/01/01 Isaiah Formatting Package]
+
+% Command for subsection headers with line
+\newcommand{\subsectionheader}[1]{%
+    \vspace{10pt}%
+    \noindent\textbf{#1}\\[-6pt]
+    \noindent\rule{\widthof{\textbf{#1}}}{0.5pt}%
+    \vspace{4pt}%
+}
+
+% Custom verse numbering command
+\newcommand{\versenum}[1]{\vspace{3pt}\textsuperscript{#1}}
+
+% Commands for highlighting text
+\newcommand{\highlightpurple}[1]{\colorbox{lightpurplebg}{\textcolor{highlightpurpletext}{#1}}}
+\newcommand{\highlightgray}[1]{\colorbox{gray!30}{\textbf{#1}}}
+\newcommand{\highlightbrown}[1]{\colorbox{lightbrownbg}{\textcolor{highlightbrown}{#1}}}
+\newcommand{\highlightgreen}[1]{\colorbox{lightgreenbg}{\textcolor{highlightgreen}{#1}}}
+\newcommand{\highlightred}[1]{\colorbox{lightredbg}{\textcolor{highlightred}{#1}}}
+\newcommand{\highlightblue}[1]{\colorbox{lightbluebg}{\textcolor{highlightblue}{#1}}}
+\newcommand{\highlightsilver}[1]{\colorbox{lightsilverbg}{\textcolor{highlightsilvertext}{#1}}}
+\newcommand{\highlightorange}[1]{\colorbox{lightorangebg}{\textcolor{highlightorangetext}{#1}}}
+\newcommand{\highlightyellow}[1]{\colorbox{lightyellowbg}{\textcolor{highlightyellowtext}{#1}}}
+\newcommand{\highlightaqua}[1]{\colorbox{lightaquabg}{\textcolor{highlightaquatext}{#1}}}
+
+% Bold text commands
+\newcommand{\boldred}[1]{\textcolor{boldred}{\textbf{#1}}}
+\newcommand{\boldblue}[1]{\textcolor{highlightblue}{\textbf{#1}}}
+\newcommand{\boldgreen}[1]{\textcolor{highlightgreen}{\textbf{#1}}}
+\newcommand{\boldbrown}[1]{\textcolor{highlightbrown}{\textbf{#1}}}
+
+% Hebrew text command (requires fontspec and bidi packages to be loaded elsewhere)
+% Note: \hebrewfont and \hebrew are defined in the main style file to avoid conflicts
+
+\endinput

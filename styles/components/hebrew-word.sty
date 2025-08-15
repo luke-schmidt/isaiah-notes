@@ -1,0 +1,57 @@
+% Hebrew Word Comparison Component
+% Card-style design with visual separation for English, Hebrew, and pronunciation
+% Usage: \hebrewword{English}{Hebrew}{Pronunciation}{Definition}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hebrew-word}[2025/01/01 Hebrew Word Comparison Component]
+
+% Hebrew font and command are defined in main style file
+
+% Hebrew word comparison command - Simple layout without TikZ
+\newcommand{\hebrewword}[4]{%
+    % #1 = English word
+    % #2 = Hebrew text  
+    % #3 = Pronunciation
+    % #4 = Definition/description
+    \par\vspace{12pt}%
+    \noindent%
+    % Main container using mdframed
+    \begin{mdframed}[
+        linewidth=2pt,
+        linecolor=bordercolor,
+        roundcorner=12pt,
+        innerleftmargin=15pt,
+        innerrightmargin=15pt,
+        innertopmargin=15pt,
+        innerbottommargin=15pt,
+        backgroundcolor=blue!5
+    ]
+        % Three element boxes using colorbox with fixed height
+        \begin{center}
+        \colorbox{white}{\makebox[0.28\linewidth][c]{\raisebox{-0.3ex}[2.5ex][1.5ex]{\textbf{\large #1}}}}%
+        \hspace{0.02\linewidth}%
+        \colorbox{lightyellowbg}{\makebox[0.28\linewidth][c]{\raisebox{-0.3ex}[2.5ex][1.5ex]{\textbf{\Large \hebrew{#2}}}}}%
+        \hspace{0.02\linewidth}%
+        \colorbox{lightbluebg}{\makebox[0.28\linewidth][c]{\raisebox{-0.3ex}[2.5ex][1.5ex]{\textit{\large #3}}}}%
+        \end{center}
+        
+        \vspace{12pt}
+        
+        % Definition section
+        \begin{mdframed}[
+            linewidth=1.5pt,
+            linecolor=gray!50,
+            roundcorner=8pt,
+            innerleftmargin=12pt,
+            innerrightmargin=12pt,
+            innertopmargin=12pt,
+            innerbottommargin=12pt,
+            backgroundcolor=lightgreenbg
+        ]
+            \textbf{Definition:} #4
+        \end{mdframed}
+    \end{mdframed}
+    \par\vspace{12pt}%
+}
+
+\endinput

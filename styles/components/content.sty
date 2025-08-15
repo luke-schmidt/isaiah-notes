@@ -1,0 +1,263 @@
+% Isaiah Bible Study Content Commands
+% Specific content and overview functions for Isaiah study
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{content}[2025/01/01 Isaiah Content Package]
+
+% Reusable Isaiah 1:2-2:21 overview with bold section parameter
+% Usage: \isaiahOverview{1} where 1=bold first section, 2=bold second, 3=bold third
+\newcommand{\isaiahOverview}[1]{%
+    \begin{overview}{Isaiah 1:2-2:21}
+    
+    % Section 1: 1:2-31
+    \ifnum#1=1
+        \overviewsectionbold[0]{%
+        \textbf{1:2-31 – Problematic Zion}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Israel
+            \item Call to repentance
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{1:2-31 – Problematic Zion}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Israel
+            \item Call to repentance
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 2: 2:1-5
+    \ifnum#1=2
+        \overviewsectionbold[1]{%
+        \textbf{2:1-5 – Future Glorious Zion}
+        \begin{itemize}
+            \item The mountain of the LORD exalted
+            \item Nations streaming to learn God's ways
+            \item Peace and instruction from Jerusalem
+        \end{itemize}
+        }
+    \else
+        \overviewsection[1]{%
+        \textbf{2:1-5 – Future Glorious Zion}
+        \begin{itemize}
+            \item The mountain of the LORD exalted
+            \item Nations streaming to learn God's ways
+            \item Peace and instruction from Jerusalem
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 3: 2:6-22
+    \ifnum#1=3
+        \overviewsectionbold[0]{%
+        \textbf{2:6-22 – Day of Yahweh}
+        \begin{itemize}
+            \item \highlightred{Judgment} on human pride and idolatry
+            \item All that is high will be brought low
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{2:6-22 – Day of Yahweh}
+        \begin{itemize}
+            \item \highlightred{Judgment} on human pride and idolatry
+            \item All that is high will be brought low
+        \end{itemize}
+        }
+    \fi
+    
+    \end{overview}
+}
+
+% Isaiah 3:1-5:30 overview with bold section parameter
+% Usage: \isaiahOverviewChapters{1} where 1=bold first section, 2=bold second, 3=bold third
+\newcommand{\isaiahOverviewChapters}[1]{%
+    \begin{overview}{Isaiah 3:1-5:30}
+    
+    % Section 1: 3:1-4:1
+    \ifnum#1=1
+        \overviewsectionbold[0]{%
+        \textbf{3:1-4:1 – Leadership Crisis}
+        \begin{itemize}
+            \item Yahweh's judgment and inversion of power structures
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{3:1-4:1 – Leadership Crisis}
+        \begin{itemize}
+            \item Yahweh's judgment and inversion of power structures
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 2: 4:2-6
+    \ifnum#1=2
+        \overviewsectionbold[1]{%
+        \textbf{4:2-6 – Future Glory}
+        \begin{itemize}
+            \item The Branch of the LORD will be beautiful
+            \item Survivors will be holy and cleansed
+            \item Divine protection over Mount Zion
+        \end{itemize}
+        }
+    \else
+        \overviewsection[1]{%
+        \textbf{4:2-6 – Future Glory}
+        \begin{itemize}
+            \item The Branch of the LORD will be beautiful
+            \item Survivors will be holy and cleansed
+            \item Divine protection over Mount Zion
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 3: 5:1-30
+    \ifnum#1=3
+        \overviewsectionbold[0]{%
+        \textbf{5:1-30 – Song of the Vineyard}
+        \begin{itemize}
+            \item Yahweh's judgment and inversion of power structures
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{5:1-30 – Song of the Vineyard}
+        \begin{itemize}
+            \item Yahweh's judgment and inversion of power structures
+        \end{itemize}
+        }
+    \fi
+    
+    \end{overview}
+}
+
+% Combined Isaiah 1:2-5:30 overview with bold section parameter
+% Usage: \isaiahOverviewCombined{4} where 4=bold section 3:1-4:1
+\newcommand{\isaiahOverviewCombined}[1]{%
+    \begin{overview}{Isaiah 1:2-5:30}
+    
+    % Section 1: 1:2-31
+    \ifnum#1=1
+        \overviewsectionbold[0]{%
+        \textbf{1:2-31 – Problematic Zion}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Israel
+            \item Call to repentance
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{1:2-31 – Problematic Zion}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Israel
+            \item Call to repentance
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 2: 2:1-5
+    \ifnum#1=2
+        \overviewsectionbold[1]{%
+        \textbf{2:1-5 – Future Glorious Zion}
+        \begin{itemize}
+            \item The mountain of the LORD exalted
+            \item Nations streaming to learn God's ways
+            \item Peace and instruction from Jerusalem
+        \end{itemize}
+        }
+    \else
+        \overviewsection[1]{%
+        \textbf{2:1-5 – Future Glorious Zion}
+        \begin{itemize}
+            \item The mountain of the LORD exalted
+            \item Nations streaming to learn God's ways
+            \item Peace and instruction from Jerusalem
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 3: 2:6-22
+    \ifnum#1=3
+        \overviewsectionbold[0]{%
+        \textbf{2:6-22 – Day of Yahweh}
+        \begin{itemize}
+            \item \highlightred{Judgment} on human pride and idolatry
+            \item All that is high will be brought low
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{2:6-22 – Day of Yahweh}
+        \begin{itemize}
+            \item \highlightred{Judgment} on human pride and idolatry
+            \item All that is high will be brought low
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 4: 3:1-4:1
+    \ifnum#1=4
+        \overviewsectionbold[0]{%
+        \textbf{3:1-4:1 – Leadership Crisis}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Judah
+            \item Inversion of power structures
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{3:1-4:1 – Leadership Crisis}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Judah
+            \item Inversion of power structures
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 5: 4:2-6
+    \ifnum#1=5
+        \overviewsectionbold[1]{%
+        \textbf{4:2-6 – Future Glory}
+        \begin{itemize}
+            \item The Branch of the LORD will be beautiful
+            \item Survivors will be holy and cleansed
+            \item Divine protection over Mount Zion
+        \end{itemize}
+        }
+    \else
+        \overviewsection[1]{%
+        \textbf{4:2-6 – Future Glory}
+        \begin{itemize}
+            \item The Branch of the LORD will be beautiful
+            \item Survivors will be holy and cleansed
+            \item Divine protection over Mount Zion
+        \end{itemize}
+        }
+    \fi
+    
+    % Section 6: 5:1-30
+    \ifnum#1=6
+        \overviewsectionbold[0]{%
+        \textbf{5:1-30 – Song of the Vineyard}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Judah
+            \item Inversion of power structures
+        \end{itemize}
+        }
+    \else
+        \overviewsection[0]{%
+        \textbf{5:1-30 – Song of the Vineyard}
+        \begin{itemize}
+            \item \highlightred{Judgment} on Judah
+            \item Inversion of power structures
+        \end{itemize}
+        }
+    \fi
+    
+    \end{overview}
+}
+
+\endinput
