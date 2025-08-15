@@ -27,11 +27,9 @@
 *.acr
 *.alg
 
-# Output directories - keep structure but ignore PDFs
-output/*.pdf
+# Output directories
 output/*.png
 chapters/*/output/
-chapters/*/*.pdf
 chapters/*/*.aux
 chapters/*/*.log
 chapters/*/*.synctex.gz
