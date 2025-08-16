@@ -17,7 +17,7 @@ This is a LaTeX project for creating Isaiah Bible study guides with specialized 
 
 ### Main Document Structure
 - `main.tex` - Primary document containing Bible study template and example content
-- `styles/isaiah.sty` - Comprehensive style package with chiastic analysis tools, verse environments, and Hebrew text support
+- `styles/` - Comprehensive styles and components package with chiastic analysis tools, verse environments, and Hebrew text support
 - `chapters/` - Individual Isaiah study files (isaiah-2-6-22.tex, isaiah_1_2-31.tex, isaiah_2_1-5.tex) with their compiled outputs
 
 ### Isaiah Study Template System
