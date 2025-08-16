@@ -1,0 +1,255 @@
+% Isaiah Grid Overview Component - FORCED Height Control
+% Creates a 3x2 grid layout: tall-short-tall, tall-short-tall
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{isaiahOverviewGrid}[2025/08/15 Isaiah Grid Overview Component]
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows}
+
+% Grid overview command - FORCED height differences
+\newcommand{\isaiahOverviewGrid}[1]{%
+    \par\vspace{15pt}%
+    % Main title centered at top
+    \begin{center}
+        \textcolor{blue}{\bfseries\Huge Isaiah 1:2-5:30 Overview}
+    \end{center}
+    \vspace{20pt}
+    
+    % First row: tall-short-tall
+    \noindent
+    % Section 1: 1:2-31 (TALL - 6.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=1
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!20, drop shadow, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 1:2-31 – Problematic Zion}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on Israel
+                    \item Call to repentance  
+                    \item Promise of restoration
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!5, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 1:2-31 – Problematic Zion}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on Israel
+                    \item Call to repentance
+                    \item Promise of restoration
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Section 2: 2:1-5 (SHORT - 4cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=2
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!20, drop shadow, text width=\linewidth-24pt,
+                minimum height=4cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 2:1-5 – Future Glorious Zion}
+                \vspace{6pt}
+                \begin{itemize}
+                    \item Mountain of the LORD exalted
+                    \item Nations streaming to learn
+                \end{itemize}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!5, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=4cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 2:1-5 – Future Glorious Zion}
+                \vspace{6pt}
+                \begin{itemize}
+                    \item Mountain of the LORD exalted
+                    \item Nations streaming to learn
+                \end{itemize}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Section 3: 2:6-22 (TALL - 6.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=3
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!20, drop shadow, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 2:6-22 – Day of Yahweh}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on human pride
+                    \item All that is high brought low
+                    \item Call to stop trusting in man
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!5, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 2:6-22 – Day of Yahweh}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on human pride
+                    \item All that is high brought low
+                    \item Call to stop trusting in man
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{15pt}
+    
+    % Second row: tall-short-tall
+    \noindent
+    % Section 4: 3:1-4:1 (TALL - 6.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=4
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!20, drop shadow, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 3:1-4:1 – Leadership Crisis}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on Judah
+                    \item Inversion of power structures
+                    \item Desperation and reproach
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!5, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 3:1-4:1 – Leadership Crisis}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on Judah
+                    \item Inversion of power structures
+                    \item Desperation and reproach
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Section 5: 4:2-6 (SHORT - 4cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=5
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!20, drop shadow, text width=\linewidth-24pt,
+                minimum height=4cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 4:2-6 – Future Glory}
+                \vspace{6pt}
+                \begin{itemize}
+                    \item Branch of the LORD beautiful
+                    \item Survivors holy and cleansed
+                \end{itemize}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!5, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=4cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 4:2-6 – Future Glory}
+                \vspace{6pt}
+                \begin{itemize}
+                    \item Branch of the LORD beautiful
+                    \item Survivors holy and cleansed
+                \end{itemize}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Section 6: 5:1-30 (TALL - 6.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=6
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!20, drop shadow, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 5:1-30 – Song of the Vineyard}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on Judah
+                    \item Wild grapes instead of good fruit
+                    \item Coming invasion and darkness
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                fill=blue!5, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\large 5:1-30 – Song of the Vineyard}
+                \vspace{8pt}
+                \begin{itemize}
+                    \item Judgment on Judah
+                    \item Wild grapes instead of good fruit
+                    \item Six woes pronounced
+                    \item Coming invasion and darkness
+                \end{itemize}
+                \vspace{1cm}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \par\vspace{15pt}%
+}
+
+\endinput
