@@ -12,18 +12,18 @@
     % #1 = English word
     % #2 = Hebrew text  
     % #3 = Pronunciation
-    % #4 = Definition/description
-    \par\vspace{12pt}%
+    % #4 = Definition/description (optional - if empty, no definition box)
+    \par\vspace{10pt}%
     \noindent%
-    % Main container using mdframed
+    % Main container using mdframed - made thinner
     \begin{mdframed}[
         linewidth=2pt,
         linecolor=bordercolor,
         roundcorner=12pt,
-        innerleftmargin=15pt,
-        innerrightmargin=15pt,
-        innertopmargin=15pt,
-        innerbottommargin=15pt,
+        innerleftmargin=12pt,
+        innerrightmargin=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=12pt,
         backgroundcolor=blue!5
     ]
         % Three element boxes using colorbox with fixed height
@@ -35,23 +35,27 @@
         \colorbox{lightbluebg}{\makebox[0.28\linewidth][c]{\raisebox{-0.3ex}[2.5ex][1.5ex]{\textit{\large #3}}}}%
         \end{center}
         
-        \vspace{12pt}
-        
-        % Definition section
-        \begin{mdframed}[
-            linewidth=1.5pt,
-            linecolor=gray!50,
-            roundcorner=8pt,
-            innerleftmargin=12pt,
-            innerrightmargin=12pt,
-            innertopmargin=12pt,
-            innerbottommargin=12pt,
-            backgroundcolor=lightgreenbg
-        ]
-            \textbf{Definition:} #4
-        \end{mdframed}
+        % Only show definition section if #4 is not empty
+        \ifx&#4&%
+            % No definition provided, skip the definition box
+        \else
+            \vspace{10pt}
+            % Definition section
+            \begin{mdframed}[
+                linewidth=1.5pt,
+                linecolor=gray!50,
+                roundcorner=8pt,
+                innerleftmargin=10pt,
+                innerrightmargin=10pt,
+                innertopmargin=10pt,
+                innerbottommargin=10pt,
+                backgroundcolor=lightgreenbg
+            ]
+                \textbf{Definition:} #4
+            \end{mdframed}
+        \fi
     \end{mdframed}
-    \par\vspace{12pt}%
+    \par\vspace{10pt}%
 }
 
 \endinput
