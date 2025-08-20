@@ -1,0 +1,37 @@
+% Bible Verse Comparison Component - Table Layout
+% Displays multiple Bible translations in a structured table format
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bible-comparison}[2025/08/20 Bible Comparison Component]
+
+% Command for individual translations (defined globally)
+\newcommand{\translation}[2]{%
+    \textbf{#1} & #2 \\
+    \hline
+}
+
+% Main environment for Bible verse comparisons in table format
+\newenvironment{biblecomparison}[1]{%
+    \par\vspace{15pt}%
+    \def\verseref{#1}%
+    
+    % Header with verse reference
+    \begin{center}
+    \textcolor{highlightblue}{\bfseries \verseref}
+    \end{center}
+    
+    % Start the comparison table
+    \begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|>{\columncolor{highlightblue!10}}p{0.2\linewidth}|p{0.75\linewidth}|}
+    \hline
+    \rowcolor{highlightblue!30}
+    \textbf{\textcolor{white}{Translation}} & \textbf{\textcolor{white}{Text}} \\
+    \hline
+}{%
+    \end{tabular}
+    \end{center}
+    \par\vspace{15pt}%
+}
+
+\endinput
