@@ -1,0 +1,68 @@
+% The Sauce Component - Variant 5: Scroll/Parchment Design
+% Ancient scroll aesthetic with good contrast and readability
+% Fits the biblical theme while being approachable
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{variant5-the-sauce}[2025/08/20 The Sauce Component - Variant 5]
+
+\RequirePackage{tikz}
+\RequirePackage{enumitem}
+\usetikzlibrary{decorations.pathmorphing,shadows}
+
+% Define parchment-inspired colors with good contrast
+\definecolor{scrollborder}{RGB}{101, 67, 33}     % Dark brown border
+\definecolor{scrollbg}{RGB}{250, 243, 221}       % Light parchment
+\definecolor{scrolltext}{RGB}{51, 51, 51}        % Dark gray text
+\definecolor{scrollaccent}{RGB}{139, 115, 85}    % Medium brown accent
+
+% Storage for items
+\newcommand{\thesauceitems}{}
+
+% Main environment for "The Sauce" component
+\newenvironment{thesauce}{%
+    \renewcommand{\thesauceitems}{}%
+    \def\sauceitem##1{\g@addto@macro\thesauceitems{\textcolor{scrollaccent}{◈} ##1\\[9pt]}}%
+}{%
+    \par\vspace{15pt}%
+    \begin{center}
+    \begin{tikzpicture}
+        % Main scroll body
+        \node[
+            rectangle,
+            rounded corners=6pt,
+            draw=scrollborder,
+            line width=2pt,
+            fill=scrollbg,
+            drop shadow={opacity=0.25, shadow xshift=3pt, shadow yshift=-3pt},
+            text width=0.86\linewidth,
+            inner sep=18pt,
+            align=left
+        ] (scroll) {
+            % Decorative header
+            \begin{center}
+            \textcolor{scrollborder}{———————————————}\\[3pt]
+            {\Large\bfseries\textcolor{scrolltext}{THE SAUCE}}\\[2pt]
+            {\normalsize\textcolor{scrollaccent}{\textit{Deep dives \& rabbit holes}}}\\[3pt]
+            \textcolor{scrollborder}{———————————————}
+            \end{center}
+            \vspace{10pt}
+            
+            % Content area
+            \textcolor{scrolltext}{\thesauceitems}
+        };
+        
+        % Add decorative scroll ends
+        \fill[scrollborder] 
+            ([yshift=8pt]scroll.north west) -- ++(8pt,0) -- ++(0,-4pt) -- ++(-8pt,0) -- cycle;
+        \fill[scrollborder] 
+            ([yshift=8pt]scroll.north east) -- ++(-8pt,0) -- ++(0,-4pt) -- ++(8pt,0) -- cycle;
+        \fill[scrollborder] 
+            ([yshift=-8pt]scroll.south west) -- ++(8pt,0) -- ++(0,4pt) -- ++(-8pt,0) -- cycle;
+        \fill[scrollborder] 
+            ([yshift=-8pt]scroll.south east) -- ++(-8pt,0) -- ++(0,4pt) -- ++(8pt,0) -- cycle;
+    \end{tikzpicture}
+    \end{center}
+    \par\vspace{15pt}%
+}
+
+\endinput
