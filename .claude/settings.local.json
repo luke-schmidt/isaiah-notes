@@ -34,7 +34,9 @@
       "Bash(git add:*)",
       "Bash(gh repo create:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(TEXINPUTS=\"temp-variants:\" pdflatex -output-directory=temp-variants temp-variants/test-v2.tex)",
+      "Bash(TEXINPUTS=\"temp-variants:\" pdflatex -output-directory=temp-variants temp-variants/test-v3.tex)"
     ],
     "deny": []
   }
