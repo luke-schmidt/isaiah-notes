@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Manual main template compilation**: `pdflatex -output-directory=output main.tex` - Direct LaTeX compilation
 - **Compile chapter files**: `cd chapters && xelatex filename.tex` - Chapter files require XeLaTeX due to Hebrew fontspec usage
 - **Output locations**: 
-  - Main template: `output/main.pdf`
+  - Main template: `main.pdf`
   - Chapter files: `chapters/filename.pdf`
 
 ## Project Architecture
@@ -34,11 +34,7 @@ The template system provides specialized environments for biblical analysis:
    - Automatic indentation levels for nested chiastic patterns
    - Supports complex verse arrangements with `\chiasticverse[marker]{indent}{text}`
 
-3. **`\begin{overview}`**
-   - Chapter summary environment with gradient styling
-   - Used with `\isaiahOverview{section_number}` for reusable content
-
-4. **`\begin{comparisontable}`**
+3. **`\begin{comparisontable}`**
    - Side-by-side comparison environment for parallel passages
    - Structured layout for textual analysis
 
@@ -100,11 +96,6 @@ The build.sh script automatically detects and configures MacTeX paths for multip
 ```
 
 **Chapter Overview**:
-```latex
-\begin{overview}
-    \isaiahOverview{1} % Displays predefined overview content for section 1
-\end{overview}
-```
 
 The current chapters demonstrate these patterns with detailed Isaiah analysis including chiastic structures, Hebrew text integration, and thematic highlighting.
 
@@ -147,4 +138,4 @@ pdflatex -output-directory=output main.tex && magick convert -density 150 output
 pdflatex -output-directory=output main.tex && pdftoppm -png -singlefile -r 150 output/main.pdf output/preview
 ```
 
-**Critical**: Always use `Read` tool on `output/preview.png` after making any template changes to verify the visual output matches expectations. The preview image provides immediate visual feedback that compilation logs cannot capture.
+**Critical**: Always use `Read` tool on the output .png file after making any template changes to verify the visual output matches expectations. The preview image provides immediate visual feedback that compilation logs cannot capture.

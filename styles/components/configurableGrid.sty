@@ -1,0 +1,103 @@
+% Configurable 3-Box Grid Component - Version 3: Minimalist
+% Creates a tall-short-tall layout with subtle, elegant styling
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{configurableGrid}[2025/08/21 Configurable 3-Box Grid v3]
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows}
+
+% Command: \configurableGrid{highlighted_box}{title}{left_text}{center_text}{right_text}
+% highlighted_box: 1, 2, or 3 for which box to highlight
+\newcommand{\configurableGrid}[5]{%
+    \par\vspace{15pt}%
+    % Minimalist title
+    \begin{center}
+        \textcolor{black}{\bfseries\Large #2}
+        \vspace{3pt}
+        
+        \textcolor{gray}{\rule{4cm}{0.5pt}}
+    \end{center}
+    \vspace{20pt}
+    
+    % Three boxes with minimal styling
+    \noindent
+    % Box 1: Left (TALL - 6.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=1
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #3
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #3
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Box 2: Center (MEDIUM - 5.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=2
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=5.5cm, anchor=north west
+            ] at (0,0) {
+                #4
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=5.5cm, anchor=north west
+            ] at (0,0) {
+                #4
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Box 3: Right (TALL - 6.5cm)
+    \begin{minipage}[t]{0.31\linewidth}
+        \ifnum#1=3
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #5
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #5
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \par\vspace{15pt}%
+}
+
+\endinput
