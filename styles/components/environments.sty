@@ -295,4 +295,90 @@
     \hline
 }
 
+% RIGHT-ALIGNED NOTE OPTIONS
+% Option 1: Margin Notes - Subtle notes in the right margin
+\newcommand{\rightnote}[1]{%
+    \marginnote{\small\raggedright\textcolor{gray!70}{#1}}%
+}
+
+% Option 2: Side-by-side Layout - Enhanced verse environments with note space
+\newenvironment{versewithsidenote}[2][]{%
+    \par\noindent%
+    \begin{minipage}[c]{0.08\linewidth}
+        \ifx&#1&%
+            % No marker
+        \else
+            \centering\textbf{\large #1}
+        \fi
+    \end{minipage}%
+    \begin{minipage}[c]{0.65\linewidth}
+    \begin{list}{}{%
+        \setlength{\leftmargin}{0pt}%
+        \setlength{\rightmargin}{0pt}%
+        \setlength{\listparindent}{0pt}%
+        \setlength{\itemindent}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\topsep}{0pt}%
+        \setlength{\itemsep}{0pt}%
+    }%
+    \item[]%
+    \def\poetryindent{#2}%
+    \ifx&#2&\def\poetryindent{2em}\fi% Default to 2em if not specified
+    \obeylines%
+    % Define alternating indent commands
+    \newcommand{\poetryline}{\hspace*{\poetryindent}}%
+}{%
+    \end{list}%
+    \end{minipage}%
+    \begin{minipage}[c]{0.27\linewidth}
+        \raggedright\small\textcolor{gray!70}{\verserightnote}
+    \end{minipage}%
+    \par\vspace{8pt}%
+}
+
+% Command to set the note for versewithsidenote
+\newcommand{\setrightnote}[1]{\def\verserightnote{#1}}
+
+% Option 3: Floating Right Notes - TikZ-positioned notes
+\newcommand{\floatrightnote}[1]{%
+    \tikz[remember picture, overlay] {
+        \node[anchor=west, text width=3cm, font=\small, text=gray!70] 
+        at ([xshift=\linewidth-2.5cm]current page.west |- 0,0) {#1};
+    }%
+}
+
+% Enhanced chiastic verse with right note support
+\newcommand{\chiasticversewnote}[4][]{%
+    % #1 = marker, #2 = level, #3 = content, #4 = note
+    \par\noindent%
+    \hspace*{#2\chiasticindent}%
+    \begin{minipage}[c]{0.08\linewidth}
+        \ifx&#1&%
+            % No marker
+        \else
+            \centering\textbf{\large #1}%
+        \fi
+    \end{minipage}%
+    \begin{minipage}[c]{\dimexpr0.65\linewidth-#2\chiasticindent\relax}
+    \begin{list}{}{%
+        \setlength{\leftmargin}{0pt}%
+        \setlength{\rightmargin}{0pt}%
+        \setlength{\listparindent}{0pt}%
+        \setlength{\itemindent}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\topsep}{0pt}%
+        \setlength{\itemsep}{0pt}%
+    }%
+    \item[]%
+    \obeylines%
+    \newcommand{\poetryline}{\hspace*{\poetryindentunit}}%
+    #3%
+    \end{list}%
+    \end{minipage}%
+    \begin{minipage}[c]{\dimexpr0.27\linewidth\relax}
+        \raggedright\small\textcolor{gray!70}{#4}
+    \end{minipage}%
+    \par\vspace{8pt}%
+}
+
 \endinput

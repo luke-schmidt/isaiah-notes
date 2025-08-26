@@ -1,0 +1,98 @@
+VISUAL MOCKUP: Right-Aligned Note Options
+==========================================
+
+OPTION 1: MARGIN NOTES
+┌─────────────────────────────────────────────────────────┬──────────────────┐
+│                                                         │                  │
+│  A  ⁶ For you have rejected your people,               │ Historical       │
+│                                                         │ context          │
+│         the house of Jacob,                             │                  │
+│                                                         │                  │
+│     because they are full of things from the east      │ Eastern          │
+│                                                         │ influences       │
+│         and of fortune-tellers like the Philistines,   │                  │
+│                                                         │                  │
+│         and they strike hands with foreigners.         │                  │
+│                                                         │                  │
+│  ⁷ Their land is filled with silver and gold,          │ Material wealth  │
+│                                                         │ theme            │
+│         and there is no end to their treasures;        │                  │
+│                                                         │                  │
+└─────────────────────────────────────────────────────────┴──────────────────┘
+
+OPTION 2: SIDE-BY-SIDE LAYOUT
+┌─────────────────────────────────────────────┬─────────────────────────────┐
+│                                             │                             │
+│  A  ⁶ For you have rejected your people,   │  This verse shows God's     │
+│                                             │  rejection of His people    │
+│         the house of Jacob,                 │  due to their foreign       │
+│                                             │  influences and idolatry.   │
+│     because they are full of things        │  The poetic structure       │
+│     from the east                           │  emphasizes the complete    │
+│                                             │  nature of their apostasy.  │
+│         and of fortune-tellers like the     │                             │
+│         Philistines,                        │                             │
+│                                             │                             │
+│         and they strike hands with          │                             │
+│         the children of foreigners.         │                             │
+│                                             │                             │
+├─────────────────────────────────────────────┼─────────────────────────────┤
+│                                             │                             │
+│  B  ⁷ Their land is filled with silver     │  Material prosperity        │
+│     and gold,                               │  without spiritual          │
+│                                             │  foundation - a common      │
+│         and there is no end to their       │  prophetic theme warning    │
+│         treasures;                          │  against trusting in       │
+│                                             │  wealth rather than God.    │
+│     their land is filled with horses,      │                             │
+│                                             │                             │
+│         and there is no end to their       │                             │
+│         chariots.                           │                             │
+│                                             │                             │
+└─────────────────────────────────────────────┴─────────────────────────────┘
+
+OPTION 3: CHIASTIC STRUCTURE WITH NOTES
+┌─────────────────────────────────────────────┬─────────────────────────────┐
+│                                             │                             │
+│  A  ⁶ For you have rejected your people,   │  Foreign influence          │
+│                                             │  corrupting God's people    │
+│         the house of Jacob,                 │                             │
+│                                             │                             │
+│     because they are full of things        │                             │
+│     from the east                           │                             │
+│                                             │                             │
+│         and of fortune-tellers like the     │                             │
+│         Philistines,                        │                             │
+│                                             │                             │
+├─────────────────────────────────────────────┼─────────────────────────────┤
+│                                             │                             │
+│    B  ⁷ Their land is filled with silver   │  Material abundance         │
+│       and gold,                             │  replacing spiritual        │
+│                                             │  dependence                 │
+│           and there is no end to their     │                             │
+│           treasures;                        │                             │
+│                                             │                             │
+│       their land is filled with horses,    │                             │
+│                                             │                             │
+│           and there is no end to their     │                             │
+│           chariots.                         │                             │
+│                                             │                             │
+├─────────────────────────────────────────────┼─────────────────────────────┤
+│                                             │                             │
+│      C  ⁸ Their land is filled with IDOLS; │  Central issue: idolatry -  │
+│                                             │  worshiping created things  │
+│             they BOW DOWN to the work of   │                             │
+│             their hands,                    │                             │
+│                                             │                             │
+│             to what their own fingers      │                             │
+│             have made.                      │                             │
+│                                             │                             │
+└─────────────────────────────────────────────┴─────────────────────────────┘
+
+LEGEND:
+- Main text area shows verse content with proper indentation
+- Right area shows where notes appear
+- Option 1: Notes float in margin, very subtle
+- Option 2: Notes get dedicated column space, more prominent
+- Option 3: Notes integrated with chiastic structure levels
+- All notes use smaller, gray text to remain subtle

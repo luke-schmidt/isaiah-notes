@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{styles/isaiah}
+
+\begin{document}
+
+\title{Right-Aligned Note Options}
+\author{Test Document}
+\date{}
+\maketitle
+
+\section{Option 1: Margin Notes}
+\begin{biblicaloutline}[Using Margin Notes]
+\subsectionheader{Simple Margin Notes}
+
+\begin{versesection}[A]
+\versenum{6} For you have rejected your people,\rightnote{Historical context about rejection}
+
+\poetryline the house of Jacob,
+
+because they are full of things from the east\rightnote{Eastern influences}
+
+\poetryline and of fortune-tellers like the Philistines,
+
+\poetryline and they strike hands with the children of foreigners.
+
+\versenum{7} Their land is filled with silver and gold,\rightnote{Material wealth theme}
+
+\poetryline and there is no end to their treasures;
+\end{versesection}
+\end{biblicaloutline}
+
+\newpage
+
+\section{Option 2: Side-by-Side Layout}
+\begin{biblicaloutline}[Using Side-by-Side Layout]
+\subsectionheader{Dedicated Note Space}
+
+\setrightnote{This verse shows God's rejection of His people due to their foreign influences and idolatry. The poetic structure emphasizes the complete nature of their apostasy.}
+\begin{versewithsidenote}[A]
+\versenum{6} For you have rejected your people,
+
+\poetryline the house of Jacob,
+
+because they are full of things from the east
+
+\poetryline and of fortune-tellers like the Philistines,
+
+\poetryline and they strike hands with the children of foreigners.
+\end{versewithsidenote}
+
+\setrightnote{Material prosperity without spiritual foundation - a common prophetic theme warning against trusting in wealth rather than God.}
+\begin{versewithsidenote}[B]
+\versenum{7} Their land is filled with silver and gold,
+
+\poetryline and there is no end to their treasures;
+
+their land is filled with horses,
+
+\poetryline and there is no end to their chariots.
+\end{versewithsidenote}
+\end{biblicaloutline}
+
+\newpage
+
+\section{Option 3: Chiastic Structure with Side Notes}
+\begin{chiasticoutline}[Isaiah 2:6-9 with Integrated Notes]{.99999em}{2em}
+
+\chiasticversewnote[A]{0}{
+\versenum{6} For you have rejected your people,
+
+\poetryline the house of Jacob,
+
+because they are full of things from the east
+
+\poetryline and of fortune-tellers like the Philistines,
+
+\poetryline and they strike hands with the children of foreigners.
+}{Foreign influence corrupting God's people}
+
+\chiasticversewnote[B]{1}{
+\versenum{7} Their land is filled with silver and gold,
+
+\poetryline and there is no end to their treasures;
+
+their land is filled with horses,
+
+\poetryline and there is no end to their chariots.
+}{Material abundance replacing spiritual dependence}
+
+\chiasticversewnote[C]{2}{
+\versenum{8} Their land is filled with \highlightred{idols};
+
+\poetryline they \highlightpurple{bow down} to the work of their hands,
+
+\poetryline to what their own fingers have made.
+}{Central issue: idolatry - worshiping created things}
+
+\chiasticversewnote[B']{1}{
+\versenum{9} So man is humbled,
+
+\poetryline and each one is brought low—
+
+\poetryline do not forgive them!
+}{Divine response to human pride and self-sufficiency}
+
+\end{chiasticoutline}
+
+\end{document}
