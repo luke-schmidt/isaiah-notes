@@ -1,0 +1,246 @@
+% Isaiah Chiastic Overview Component - Variation 1A: Vertical with Connecting Lines
+% Creates a vertical chiastic structure with visual connection lines
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{isaiahChiasticOverview1a}[2025/09/05 Isaiah Chiastic Overview - Vertical with Lines]
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows}
+
+% Chiastic overview command - Vertical layout with connecting lines
+\newcommand{\isaiahChiasticOverview}[1]{%
+    \par\vspace{15pt}%
+    % Main title centered at top
+    \begin{center}
+        \textcolor{blue}{\bfseries\Huge Isaiah 1-12 Chiastic Overview}
+    \end{center}
+    \vspace{20pt}
+    
+    \begin{center}
+    \begin{tikzpicture}[node distance=0.8cm]
+        
+        % Intro Section (Chapter 1) - at top
+        \ifnum#1=1
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=orange!20, drop shadow, text width=8cm,
+                  minimum height=2cm] (intro) {
+                \begin{center}
+                \textbf{\Large Chapter 1}
+                
+                \textbf{Introduction to Isaiah}
+                \end{center}
+                \vspace{4pt}
+                \centering\textit{Setting the stage for the entire prophecy}
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=orange!5, drop shadow={opacity=0.3}, text width=8cm,
+                  minimum height=2cm] (intro) {
+                \begin{center}
+                \textbf{\Large Chapter 1}
+                
+                \textbf{Introduction to Isaiah}
+                \end{center}
+                \vspace{4pt}
+                \centering\textit{Setting the stage for the entire prophecy}
+            };
+        \fi
+        
+        % A: Chapters 2-4 (full width)
+        \ifnum#1=2
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=blue!20, drop shadow, text width=8cm, minimum height=2.5cm,
+                  below=of intro, yshift=-1cm] (A) {
+                \textbf{\Large A. Chapters 2-4}
+                
+                \textbf{Glorious Mt. Zion - Judgment - Righteous Branch}
+                \vspace{4pt}
+                
+                The future glory and present judgment themes established
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=blue!5, drop shadow={opacity=0.3}, text width=8cm, minimum height=2.5cm,
+                  below=1cm of intro] (A) {
+                \textbf{\Large A. Chapters 2-4}
+                
+                \textbf{Glorious Mt. Zion - Judgment - Righteous Branch}
+                \vspace{4pt}
+                
+                The future glory and present judgment themes established
+            };
+        \fi
+        
+        % B: Chapter 5:1-25 (indented)
+        \ifnum#1=3
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=green!20, drop shadow, text width=6.5cm, minimum height=2.5cm,
+                  below=0.6cm of A, xshift=0.75cm] (B) {
+                \textbf{\Large B. Chapter 5:1-25}
+                
+                \textbf{Vineyard Parable with Woes/Therefores}
+                \vspace{4pt}
+                
+                \textit{Holy One of Israel} - Judgment on unfaithful vineyard
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=green!5, drop shadow={opacity=0.3}, text width=6.5cm, minimum height=2.5cm,
+                  below=0.6cm of A, xshift=0.75cm] (B) {
+                \textbf{\Large B. Chapter 5:1-25}
+                
+                \textbf{Vineyard Parable with Woes/Therefores}
+                \vspace{4pt}
+                
+                \textit{Holy One of Israel} - Judgment on unfaithful vineyard
+            };
+        \fi
+        
+        % C: Chapter 5:26-30 (more indented)
+        \ifnum#1=4
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=red!20, drop shadow, text width=5cm, minimum height=2cm,
+                  below=0.6cm of B, xshift=0.75cm] (C) {
+                \textbf{\Large C. Chapter 5:26-30}
+                
+                \textbf{Assyria - Nothing but Darkness}
+                \vspace{4pt}
+                
+                Foreign nation brings despair and judgment
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=red!5, drop shadow={opacity=0.3}, text width=5cm, minimum height=2cm,
+                  below=0.6cm of B, xshift=0.75cm] (C) {
+                \textbf{\Large C. Chapter 5:26-30}
+                
+                \textbf{Assyria - Nothing but Darkness}
+                \vspace{4pt}
+                
+                Foreign nation brings despair and judgment
+            };
+        \fi
+        
+        % CENTER: Chapters 6-8 (maximum indentation)
+        \ifnum#1=5
+            \node[draw=black, line width=4pt, rounded corners=15pt, inner sep=15pt,
+                  fill=yellow!30, drop shadow, text width=3.5cm, minimum height=3cm,
+                  below=0.6cm of C, xshift=0.75cm] (center) {
+                \begin{center}
+                \textbf{\Large CENTER}
+                
+                \textbf{Chapters 6-8}
+                
+                \textbf{Narrative Middle}
+                \end{center}
+                \vspace{4pt}
+                
+                Views of the King and promised children
+            };
+        \else
+            \node[draw=gray, line width=3pt, rounded corners=15pt, inner sep=15pt,
+                  fill=yellow!8, drop shadow={opacity=0.3}, text width=3.5cm, minimum height=3cm,
+                  below=0.6cm of C, xshift=0.75cm] (center) {
+                \begin{center}
+                \textbf{\Large CENTER}
+                
+                \textbf{Chapters 6-8}
+                
+                \textbf{Narrative Middle}
+                \end{center}
+                \vspace{4pt}
+                
+                Views of the King and promised children
+            };
+        \fi
+        
+        % C': Chapter 9:1-7 (decreasing indentation)
+        \ifnum#1=6
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=red!20, drop shadow, text width=5cm, minimum height=2cm,
+                  below=0.6cm of center, xshift=-0.75cm] (Cprime) {
+                \textbf{\Large C'. Chapter 9:1-7}
+                
+                \textbf{Darkness Broken by Promised Child}
+                \vspace{4pt}
+                
+                Hope emerges - oppressors defeated
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=red!5, drop shadow={opacity=0.3}, text width=5cm, minimum height=2cm,
+                  below=0.6cm of center, xshift=-0.75cm] (Cprime) {
+                \textbf{\Large C'. Chapter 9:1-7}
+                
+                \textbf{Darkness Broken by Promised Child}
+                \vspace{4pt}
+                
+                Hope emerges - oppressors defeated
+            };
+        \fi
+        
+        % B': Chapter 9:8-10:34 (decreasing indentation)
+        \ifnum#1=7
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=green!20, drop shadow, text width=6.5cm, minimum height=2.5cm,
+                  below=0.6cm of Cprime, xshift=-0.75cm] (Bprime) {
+                \textbf{\Large B'. Chapters 9:8-10:34}
+                
+                \textbf{Woes/Therefores of Judgment}
+                \vspace{4pt}
+                
+                \textit{Holy One of Israel} - Extended judgment oracle
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=green!5, drop shadow={opacity=0.3}, text width=6.5cm, minimum height=2.5cm,
+                  below=0.6cm of Cprime, xshift=-0.75cm] (Bprime) {
+                \textbf{\Large B'. Chapters 9:8-10:34}
+                
+                \textbf{Woes/Therefores of Judgment}
+                \vspace{4pt}
+                
+                \textit{Holy One of Israel} - Extended judgment oracle
+            };
+        \fi
+        
+        % A': Chapters 11-12 (back to full width)
+        \ifnum#1=8
+            \node[draw=black, line width=3pt, rounded corners=12pt, inner sep=12pt,
+                  fill=blue!20, drop shadow, text width=8cm, minimum height=2.5cm,
+                  below=0.6cm of Bprime, xshift=-0.75cm] (Aprime) {
+                \textbf{\Large A'. Chapters 11-12}
+                
+                \textbf{Righteous Branch brings Glorious Mt. Zion}
+                \vspace{4pt}
+                
+                The future glory and righteous branch themes fulfilled
+            };
+        \else
+            \node[draw=gray, line width=2pt, rounded corners=12pt, inner sep=12pt,
+                  fill=blue!5, drop shadow={opacity=0.3}, text width=8cm, minimum height=2.5cm,
+                  below=0.6cm of Bprime, xshift=-0.75cm] (Aprime) {
+                \textbf{\Large A'. Chapters 11-12}
+                
+                \textbf{Righteous Branch brings Glorious Mt. Zion}
+                \vspace{4pt}
+                
+                The future glory and righteous branch themes fulfilled
+            };
+        \fi
+        
+        % Draw connecting lines to show relationships
+        \draw[thick, blue!60, ->] (A.south east) -- (B.north west);
+        \draw[thick, green!60, ->] (B.south east) -- (C.north west);
+        \draw[thick, red!60, ->] (C.south east) -- (center.north west);
+        \draw[thick, red!60, ->] (center.south east) -- (Cprime.north west);
+        \draw[thick, green!60, ->] (Cprime.south west) -- (Bprime.north east);
+        \draw[thick, blue!60, ->] (Bprime.south west) -- (Aprime.north east);
+        
+    \end{tikzpicture}
+    \end{center}
+    
+    \par\vspace{15pt}%
+}
+
+\endinput

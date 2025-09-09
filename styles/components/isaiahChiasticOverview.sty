@@ -1,0 +1,244 @@
+% Isaiah Chiastic Overview Component - Gradient Borders Style
+% Creates a vertical chiastic structure with gradient border thickness and curved elements
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{isaiahChiasticOverview}[2025/09/05 Isaiah Chiastic Overview - Gradient Borders]
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows}
+
+% Chiastic overview command - Vertical layout with gradient styling
+\newcommand{\isaiahChiasticOverview}[1]{%
+    \par\vspace{15pt}%
+    % Main title centered at top
+    \begin{center}
+        \textcolor{black}{\bfseries\Huge Isaiah 1-12 Overview}
+    \end{center}
+    \vspace{20pt}
+    
+    % A: Chapter 1 (thickest border)
+    \noindent
+    \begin{minipage}{\linewidth}
+        \ifnum#1=1
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=7pt, rounded corners=18pt, inner sep=15pt,
+                fill=blue!3, drop shadow, text width=\linewidth-30pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE A} \hspace{1cm} \textbf{\Large Chapter 1}
+                
+                \textbf{The Vision and Call to Repentance}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=3pt, rounded corners=18pt, inner sep=15pt,
+                fill=blue!3, drop shadow={opacity=0.3}, text width=\linewidth-30pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE A} \hspace{1cm} \textbf{\Large Chapter 1}
+                
+                \textbf{The Vision and Call to Repentance}
+                            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{12pt}
+    
+    % B: Chapters 2-4 (medium thick border, indented)
+    \noindent\hspace{1.2cm}
+    \begin{minipage}{0.83\linewidth}
+        \ifnum#1=2
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=6pt, rounded corners=16pt, inner sep=12pt,
+                fill=green!3, drop shadow, text width=\linewidth-24pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE B} \hspace{1cm} \textbf{\Large Chapters 2-4}
+                
+                \textbf{Glorious Mt. Zion — Judgment — Righteous Branch}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=16pt, inner sep=12pt,
+                fill=green!3, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE B} \hspace{1cm} \textbf{\Large Chapters 2-4}
+                
+                \textbf{Glorious Mt. Zion — Judgment — Righteous Branch}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{8pt}
+    
+    % C: Chapter 5 (thinner border, more indented)
+    \noindent\hspace{2.4cm}
+    \begin{minipage}{0.66\linewidth}
+        \ifnum#1=3
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=5pt, rounded corners=14pt, inner sep=10pt,
+                fill=red!3, drop shadow, text width=\linewidth-20pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE C} \hspace{0.8cm} \textbf{\Large Chapter 5}
+                
+                \textbf{Vineyard Parable and Assyrian Threat}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=14pt, inner sep=10pt,
+                fill=red!3, drop shadow={opacity=0.3}, text width=\linewidth-20pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE C} \hspace{0.8cm} \textbf{\Large Chapter 5}
+                
+                \textbf{Vineyard Parable and Assyrian Threat}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{8pt}
+    
+    % CENTER: Chapters 6-9:7 (special oval styling, maximum indentation)
+    \noindent\hspace{3.6cm}
+    \begin{minipage}{0.49\linewidth}
+        \ifnum#1=4
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=8pt, rounded corners=25pt, inner sep=18pt,
+                fill=yellow!5, drop shadow, text width=\linewidth-36pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\Large Chapters 6-9:7}
+                
+                \textbf{Glory of Yahweh/3 Sons}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=3pt, rounded corners=25pt, inner sep=18pt,
+                fill=yellow!5, drop shadow={opacity=0.3}, text width=\linewidth-36pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\Large Chapters 6-9:7}
+                
+                \textbf{Glory of Yahweh/3 Sons}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{8pt}
+    
+    % C': Chapter 9:8-10:34 (thinner border, more indented)
+    \noindent\hspace{2.4cm}
+    \begin{minipage}{0.66\linewidth}
+        \ifnum#1=5
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=5pt, rounded corners=14pt, inner sep=10pt,
+                fill=red!3, drop shadow, text width=\linewidth-20pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE C'} \hspace{0.8cm} \textbf{\Large Chapters 9:8-10:34}
+                
+                \textbf{Extended Woes and Divine Judgment}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=14pt, inner sep=10pt,
+                fill=red!3, drop shadow={opacity=0.3}, text width=\linewidth-20pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE C'} \hspace{0.8cm} \textbf{\Large Chapters 9:8-10:34}
+                
+                \textbf{Extended Woes and Divine Judgment}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{8pt}
+    
+    % B': Chapter 11 (medium thick border, indented)
+    \noindent\hspace{1.2cm}
+    \begin{minipage}{0.83\linewidth}
+        \ifnum#1=6
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=6pt, rounded corners=16pt, inner sep=12pt,
+                fill=green!3, drop shadow, text width=\linewidth-24pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE B'} \hspace{1cm} \textbf{\Large Chapter 11}
+                
+                \textbf{The Righteous Branch and Peaceful Kingdom}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=2pt, rounded corners=16pt, inner sep=12pt,
+                fill=green!3, drop shadow={opacity=0.3}, text width=\linewidth-24pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE B'} \hspace{1cm} \textbf{\Large Chapter 11}
+                
+                \textbf{The Righteous Branch and Peaceful Kingdom}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \vspace{12pt}
+    
+    % A': Chapter 12 (mirroring A, back to full width and thickest border)
+    \noindent
+    \begin{minipage}{\linewidth}
+        \ifnum#1=7
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=7pt, rounded corners=18pt, inner sep=15pt,
+                fill=blue!3, drop shadow, text width=\linewidth-30pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE A'} \hspace{1cm} \textbf{\Large Chapter 12}
+                
+                \textbf{Songs of Salvation and Praise}
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray, line width=3pt, rounded corners=18pt, inner sep=15pt,
+                fill=blue!3, drop shadow={opacity=0.3}, text width=\linewidth-30pt,
+                minimum height=2cm, anchor=north west
+            ] at (0,0) {
+                \textbf{\LARGE A'} \hspace{1cm} \textbf{\Large Chapter 12}
+                
+                \textbf{Songs of Salvation and Praise}
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \par\vspace{15pt}%
+}
+
+\endinput
