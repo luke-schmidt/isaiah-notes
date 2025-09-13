@@ -48,7 +48,24 @@ The template system provides specialized environments for biblical analysis:
 **Text Highlighting** (complete set):
 - **Colors**: `\highlightred{text}`, `\highlightpurple{text}`, `\highlightbrown{text}`, `\highlightgreen{text}`, `\highlightblue{text}`, `\highlightsilver{text}`, `\highlightorange{text}`, `\highlightyellow{text}`, `\highlightaqua{text}`, `\highlightgray{text}`
 - **Bold Colors**: `\boldred{text}`, `\boldblue{text}`
-- **Hebrew Text**: `\hebrew{text}` - Proper formatting for Hebrew characters
+- **Hebrew Text**: `\hebrew{text}` - Basic Hebrew text formatting
+- **Hebrew Word Analysis**: `\hebrewword{English}{Hebrew}{Pronunciation}{Definition}` - Card-style analysis with colored boxes for each component (leave definition empty `{}` for no definition box)
+
+**Scholarly Quotes** (with proper attribution):
+```latex
+\begin{quote}
+\textit{"Quote text in italics with proper quotation marks"}\\\\
+\hfill --- Author Name, \textit{Book Title}
+\end{quote}
+```
+- Use `\\\\` for paragraph breaks within quotes
+- Book titles always italicized with `\textit{}`
+- Right-aligned attribution with `\hfill ---`
+- URLs can be added after book titles for web sources
+  - Hebrew text in yellow box (using proper Hebrew fontspec)
+  - Pronunciation/transliteration in blue box  
+  - Optional definition section in green box (omit if definition parameter is empty)
+  - Card-style layout with rounded borders and visual separation
 
 ### MacTeX Path Configuration
 The build.sh script automatically detects and configures MacTeX paths for multiple installation years (2024, 2025) and fallback locations.
@@ -93,6 +110,18 @@ The build.sh script automatically detects and configures MacTeX paths for multip
     \chiasticverselabel[B']{1}{\versenum{4-5} Corresponding content...}{Response}
     \chiasticverselabel[A']{0}{\versenum{6} Closing text...}{Conclusion}
 \end{chiasticoutline}
+```
+
+**Hebrew Word Analysis**:
+```latex
+% Basic Hebrew word with definition
+\hebrewword{Justice}{מִשְׁפָּט}{mish.pat}{God's right order in the world.}
+
+% Hebrew word with empty definition (no definition box shown)
+\hebrewword{Bloodshed}{מִשְׂפָּח}{mis.pach}{}
+
+% Advanced example with detailed definition
+\hebrewword{Virgin}{עַלְמָה}{al.mah}{young woman of marriable age}
 ```
 
 **Chapter Overview**:
