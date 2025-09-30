@@ -15,6 +15,15 @@
 % Custom verse numbering command
 \newcommand{\versenum}[1]{\vspace{3pt}\textsuperscript{#1}}
 
+% Verse numbering command with optional footnote
+\newcommand{\versenumfootnote}[2]{\vspace{3pt}\textsuperscript{#1}\footnote{#2}}
+
+% Command for adding footnotes to specific words
+\newcommand{\wordfootnote}[2]{#1\footnote{#2}}
+
+% Command for adding section footnotes to specific words
+\newcommand{\sectionwordfootnote}[2]{\mbox{#1\addsectionfootnote{#2}}}
+
 % Commands for highlighting text
 \newcommand{\highlightpurple}[1]{\colorbox{lightpurplebg}{\textcolor{highlightpurpletext}{#1}}}
 \newcommand{\highlightgray}[1]{\colorbox{gray!30}{\textbf{#1}}}

@@ -1,0 +1,129 @@
+% Left-Right Grid Component - One tall left box with three right boxes (tall-small-tall)
+% Creates a layout with one prominent left box and three boxes on the right
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{leftRightGrid}[2025/09/28 Left-Right Grid v1]
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows}
+
+% Command: \leftRightGrid{highlighted_box}{title}{left_text}{right_top_text}{right_middle_text}{right_bottom_text}
+% highlighted_box: 1, 2, 3, or 4 for which box to highlight
+% Layout: One tall box left, space, then tall-small-tall on right
+\newcommand{\leftRightGrid}[6]{%
+    \par\vspace{15pt}%
+    % Minimalist title
+    \begin{center}
+        \textcolor{black}{\bfseries\Large #2}
+        \vspace{3pt}
+        
+        \textcolor{gray}{\rule{4cm}{0.5pt}}
+    \end{center}
+    \vspace{20pt}
+    
+    % Four boxes with minimal styling - One left, space, three right
+    \noindent
+    % Box 1: Left (TALL - 6.5cm)
+    \begin{minipage}[t]{0.28\linewidth}
+        \ifnum#1=1
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #3
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #3
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hspace{0.08\linewidth}
+    % Box 2: Right Top (TALL - 6.5cm)
+    \begin{minipage}[t]{0.19\linewidth}
+        \ifnum#1=2
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #4
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #4
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Box 3: Right Middle (SMALL - 4.5cm)
+    \begin{minipage}[t]{0.19\linewidth}
+        \ifnum#1=3
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=4.5cm, anchor=north west
+            ] at (0,0) {
+                #5
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=4.5cm, anchor=north west
+            ] at (0,0) {
+                #5
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}%
+    \hfill
+    % Box 4: Right Bottom (TALL - 6.5cm)
+    \begin{minipage}[t]{0.19\linewidth}
+        \ifnum#1=4
+            \begin{tikzpicture}
+            \node[
+                draw=black, line width=2pt, rounded corners=8pt, inner sep=15pt,
+                fill=gray!8, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #6
+            };
+            \end{tikzpicture}
+        \else
+            \begin{tikzpicture}
+            \node[
+                draw=gray!40, line width=1pt, rounded corners=8pt, inner sep=15pt,
+                fill=white, text width=\linewidth-30pt,
+                minimum height=6.5cm, anchor=north west
+            ] at (0,0) {
+                #6
+            };
+            \end{tikzpicture}
+        \fi
+    \end{minipage}
+    
+    \par\vspace{15pt}%
+}
+
+\endinput
