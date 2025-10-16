@@ -39,7 +39,8 @@
       "Bash(TEXINPUTS=\"temp-variants:\" pdflatex -output-directory=temp-variants temp-variants/test-v3.tex)",
       "Bash(TEXINPUTS=temp-component-test: pdflatex -output-directory=temp-component-test temp-component-test/test-v2.tex)",
       "Bash(TEXINPUTS=temp-component-test: pdflatex -output-directory=temp-component-test temp-component-test/test-v3.tex)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Read(//Users/luke.schmidt/**)"
     ],
     "deny": []
   }

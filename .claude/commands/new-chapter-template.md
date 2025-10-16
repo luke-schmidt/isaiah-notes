@@ -1,10 +1,12 @@
 
-alright. let's create a new chapter file for 10:1-4. I want it to be modeled after this isaiah-9-8 file where it includes the the leftRightGrid for 9:8-10:34 but with the middle highlighted.
+alright. let's create a new chapter file for 10:5-34. I want it to be modeled after this isaiah-9-8-21 file where it includes the the leftRightGrid for 9:8-10:34 but with the right highlighted.
 
-I want then the `overview` component of this 9:8-9:27 chapter file to include an `overviewsection` for each of the 3 "For all this his anger is not turned away..." sections:
-* Verses 8-12: Nations against Israel
-* Verses 13-17: Israel's Leaders against Poor
-* Verses 18-21: Israel against Itself
+I want then the `overview` component of this chapter file to include an `overviewsection`  the following sections:
+* Verses 5-15: Assyria is coming
+    * Verses 16-19: Therefore #1: Yahweh will burn up Assyria
+        * Verses 20-23:
+    * 
+* 
 
 I want to highlight some common words as well. Let's highlight:
 * "devour Israel with an open mouth", "swallowed up", "mouth", "devour", "devours" (3x) all highlightbrown
