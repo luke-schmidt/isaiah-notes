@@ -1,0 +1,158 @@
+{
+  "description": "Mapping from Notability notation to LaTeX commands for Isaiah study notes",
+  "version": "1.0",
+
+  "highlights": {
+    "note": "Highlight colors are mostly random for marking repeated words or thematic connections. No fixed color-to-meaning mapping.",
+    "yellow": {
+      "latex": "\\highlightyellow"
+    },
+    "purple": {
+      "latex": "\\highlightpurple"
+    },
+    "red": {
+      "latex": "\\highlightred"
+    },
+    "blue": {
+      "latex": "\\highlightblue"
+    },
+    "orange": {
+      "latex": "\\highlightorange"
+    },
+    "green": {
+      "latex": "\\highlightgreen"
+    },
+    "brown": {
+      "latex": "\\highlightbrown"
+    },
+    "gray": {
+      "latex": "\\highlightgray"
+    },
+    "aqua": {
+      "latex": "\\highlightaqua"
+    },
+    "silver": {
+      "latex": "\\highlightsilver"
+    }
+  },
+
+  "structural_markers": {
+    "red_circle": {
+      "indicator": "Text circled in red",
+      "latex_env": "\\begin{chiasticoutline}",
+      "command": "\\chiasticverse",
+      "with_label": "\\chiasticverselabel",
+      "description": "Indicates literary/chiastic structure. Red circles mark the structural elements (A, B, C, A', B', etc.). Indentation indicates depth. Primes (') indicate corresponding elements."
+    },
+    "blue_circle": {
+      "indicator": "Text circled in blue (with optional title nearby)",
+      "latex_env": "\\begin{biblicaloutline}",
+      "description": "Marks general notes and commentary sections. Blue circles indicate content that needs LaTeX formatting. Optional blue title text provides the section header."
+    },
+    "overview": {
+      "patterns": ["OVERVIEW:", "STRUCTURE:"],
+      "latex_env": "\\begin{overview}",
+      "command": "\\overviewsection",
+      "description": "Chapter overview sections. Indentation level maps to \\overviewsection[level] parameter."
+    }
+  },
+
+  "footnote_markers": {
+    "black_star": {
+      "symbol": "★ (small black star)",
+      "latex": "\\sectionwordfootnote",
+      "typical_use": "All footnotes - placed by word and by corresponding note",
+      "description": "Single marker type for all footnote content (translation alternatives, cross-references, Hebrew/Greek explanations, scholarly citations)"
+    }
+  },
+
+  "special_elements": {
+    "purple_circle": {
+      "indicator": "Circled in purple",
+      "latex": "\\includegraphics[width=\\textwidth]{filename.png}",
+      "description": "Marks images that need to be added to the LaTeX document. Look for nearby labels/captions to determine image context."
+    },
+    "hebrew_word": {
+      "latex": "\\hebrewword{English}{Hebrew}{Pronunciation}{Definition}",
+      "components": {
+        "english": "English translation of the word",
+        "hebrew": "Hebrew characters (requires fontspec)",
+        "pronunciation": "Transliteration/phonetic spelling",
+        "definition": "Theological or contextual meaning (can be empty {})"
+      },
+      "description": "Specialized Hebrew word analysis cards"
+    },
+    "cross_reference": {
+      "patterns": ["cf.", "See", "Compare with", "See also"],
+      "format": "Book Chapter:Verse",
+      "examples": ["cf. Amos 1:6", "See Ex. 6:6", "Compare with Gen 6:5, 11"],
+      "description": "References to other Scripture passages"
+    },
+    "placeholder": {
+      "indicators": ["TODO", "EXPAND", "RESEARCH", "?", "[...]"],
+      "latex_format": "{\\large\\bfseries Topic Title}\n\\vspace{1em}\n\nInitial notes...",
+      "description": "Topics marked for future expansion"
+    },
+    "quotes": {
+      "latex": "\\begin{quote}\n\\textit{\"...\"}\\\\\\\\\n\\hfill --- Author, \\textit{Book}\n\\end{quote}",
+      "format_rules": [
+        "Quote text in italics with proper quotation marks",
+        "Use \\\\\\\\ for paragraph breaks within quotes",
+        "Right-align attribution with \\hfill ---",
+        "Book titles italicized with \\textit{}"
+      ],
+      "description": "Scholarly quotations with proper attribution"
+    }
+  },
+
+  "verse_formatting": {
+    "environment": "\\begin{versesection}{indent}",
+    "line_command": "\\poetryline",
+    "verse_number": "\\versenum{n}",
+    "default_indent": "2em",
+    "description": "Poetry-style verse layout with consistent indentation"
+  },
+
+  "commentary_sections": {
+    "format": "{\\large\\bfseries Section Title}\n\\vspace{1em}\n\nContent...",
+    "placement": "Between biblical outline sections or after related verses",
+    "typical_titles": [
+      "Hand Still Stretched Out",
+      "Devoured",
+      "God has no compassion on Poor?",
+      "Who's Doing This?",
+      "Bricks, Stones, Sycamores, and Cedars"
+    ],
+    "description": "Thematic commentary and explanation sections"
+  },
+
+  "document_structure": {
+    "header": [
+      "\\documentclass[11pt]{article}",
+      "\\usepackage[margin=1in]{geometry}",
+      "\\usepackage{../../styles/isaiah}",
+      "\\usepackage{../../styles/components/threeBoxGrid}"
+    ],
+    "sections_order": [
+      "\\isaiahChiasticOverview{level}",
+      "\\threeBoxGrid - context boxes",
+      "\\begin{overview} - chapter structure",
+      "Biblical outlines with verses",
+      "Commentary sections",
+      "Images",
+      "Additional commentary"
+    ],
+    "description": "Standard document structure for chapter files"
+  },
+
+  "conversion_hints": {
+    "blue_circles": "Blue circles mark general notes/commentary - look for nearby blue title text for section headers",
+    "red_circles": "Red circles mark literary structure - indicates chiastic or outline structure",
+    "purple_circles": "Purple circles mark images to be added - look for nearby labels/captions",
+    "black_stars": "Small black stars (★) mark footnotes - one star by the word, one star by the corresponding note",
+    "highlights": "Random colors mark repeated words or thematic connections - don't assume fixed meaning per color",
+    "verse_ranges": "Always look for verse numbers and ranges (e.g., '8-12', 'v.13', 'vv. 18-21')",
+    "theme_detection": "Section headers typically follow pattern 'Verses X-Y: Theme Description'",
+    "indentation": "Visual indentation in notes maps to chiastic depth or outline level"
+  }
+}

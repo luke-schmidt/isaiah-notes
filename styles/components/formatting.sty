@@ -22,7 +22,8 @@
 \newcommand{\wordfootnote}[2]{#1\footnote{#2}}
 
 % Command for adding section footnotes to specific words
-\newcommand{\sectionwordfootnote}[2]{\mbox{#1\addsectionfootnote{#2}}}
+% Uses \hbox to protect the footnote marker without breaking obeylines contexts
+\newcommand{\sectionwordfootnote}[2]{#1\hbox{\addsectionfootnote{#2}}}
 
 % Commands for highlighting text
 \newcommand{\highlightpurple}[1]{\colorbox{lightpurplebg}{\textcolor{highlightpurpletext}{#1}}}

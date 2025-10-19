@@ -11,11 +11,12 @@
 \makeatletter
 \newcommand{\addsectionfootnote}[1]{%
     \stepcounter{sectionfootnote}%
-    \textsuperscript{\arabic{sectionfootnote}}%
+    \protected@edef\@tempa{\arabic{sectionfootnote}}%
+    \textsuperscript{\@tempa}%
     \ifx\sectionfootnotelist\empty
-        \xdef\sectionfootnotelist{\noexpand\indent\arabic{sectionfootnote}. #1}%
+        \protected@xdef\sectionfootnotelist{\noexpand\indent\@tempa. #1}%
     \else
-        \xdef\sectionfootnotelist{\sectionfootnotelist\noexpand\par\noexpand\vspace{3pt}\noexpand\indent\arabic{sectionfootnote}. #1}%
+        \protected@xdef\sectionfootnotelist{\sectionfootnotelist\noexpand\par\noexpand\vspace{3pt}\noexpand\indent\@tempa. #1}%
     \fi
 }
 \makeatother
@@ -173,8 +174,8 @@
             \setlength{\itemsep}{0pt}%
         }%
         \item[]%
+        \def\poetryline{\hspace*{\poetryindentunit}}%
         \obeylines%
-        \newcommand{\poetryline}{\hspace*{\poetryindentunit}}%
         ##3%
         \end{list}%
         \end{minipage}%
@@ -205,8 +206,8 @@
             \setlength{\itemsep}{0pt}%
         }%
         \item[]%
+        \def\poetryline{\hspace*{\poetryindentunit}}%
         \obeylines%
-        \newcommand{\poetryline}{\hspace*{\poetryindentunit}}%
         ##3%
         \end{list}%
         \end{minipage}%

@@ -1,26 +1,32 @@
 
-alright. let's create a new chapter file for 10:5-34. I want it to be modeled after this isaiah-9-8-21 file where it includes the the leftRightGrid for 9:8-10:34 but with the right highlighted.
+alright. let's create a new chapter file for 10:5-34. I want it to be modeled after the isaiah-9-8-21 file where it includes the the leftRightGrid for 9:8-10:34 but with the right highlighted.
 
 I want then the `overview` component of this chapter file to include an `overviewsection`  the following sections:
 * Verses 5-15: Assyria is coming
-    * Verses 16-19: Therefore #1: Yahweh will burn up Assyria
-        * Verses 20-23:
-    * 
-* 
+    * Verses 16-19: Therefore #1: Yahweh will burn up Assyria but a remnant will remain
+        * Verses 20-23: A remnant of Israel will trust Yahweh
+    * Verses 24-27: Therefore #2: Don't be afraid of Assyria
+* Verses 28-34: Assyria is coming
 
 I want to highlight some common words as well. Let's highlight:
-* "devour Israel with an open mouth", "swallowed up", "mouth", "devour", "devours" (3x) all highlightbrown
-* "For all this....stretched out still" (3x) in highlightorange
-* "Ephriam" (3x) in highlightyellow
-* "fire" in highlightred
+* "Woe" in grey
+* "staff", "rod", "rod and lift up their staff", "lifts it", "lift him", "lift it" all highlightbrown
+* "Hands", "hand", "fist" in purple
+* "Therefore" in blue
+* "remnant" in orange
+* "LORD of Hosts" in yellow
 
-I'd like each of the 3 sections to have their own
+I'd like each of the 5 sections to have their own
 biblicaloutline (no subsection headers for now)
 
 I'd like footnotes on the following words:
-* "word" in v8 – "Septuigent – "plague/death""
-* "Philistines on the west" – "C.f. Amos 1:6 – Could be figurative or they could've been involved in capturing the fleeing Israelites during Assyrian invasion"
-* "arm" – "Septuigent – "Brother"; Could also be interpreted "seed""
+* "take spoil and seize plunder" in v6 – "Shalal Shalal Baz Baz"
+* "finished" in v12 – "Lit. "Cut off" – Motyer says it's a tailoring/weaving term. Like snipping off of a thread."
+* "found" in v14 – "Reached"
+* "wealth of the peoples" in v14 – "Compare with v10 what else His hand has reached to"
+* "earth" in v23 – "Land"
+* "fat" in v27 – "or "oil" – confusing in the Hebrew as well. Could be a picture of an ox so fat from such little work that the yoke breaks
+* "fist" in v32 – "Hand"
 
 I'd like placeholder notes for the following topics:
 * "Hand Still Stretched Out" – read Ex. 6:6 and Deut 4:34. The stretched out hand can be the power to save or the power to judge
