@@ -6,10 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **Compile main template**: `./build.sh` - Compiles main.tex and opens the resulting PDF automatically on macOS
 - **Manual main template compilation**: `pdflatex -output-directory=output main.tex` - Direct LaTeX compilation
-- **Compile chapter files**: `cd chapters && xelatex filename.tex` - Chapter files require XeLaTeX due to Hebrew fontspec usage
-- **Output locations**: 
-  - Main template: `main.pdf`
-  - Chapter files: `chapters/filename.pdf`
+- **Compile chapter files**: Chapter files require XeLaTeX due to Hebrew fontspec usage
+  - Navigate into the specific chapter directory: `cd chapters/isaiah-10-1-4`
+  - Compile with XeLaTeX: `xelatex isaiah-10-1-4.tex`
+  - PDF will be created in the same directory
+- **Output locations**:
+  - Main template: `output/main.pdf`
+  - Chapter files: `chapters/chapter-name/chapter-name.pdf` (in the same directory as the .tex file)
 
 ## Project Architecture
 
@@ -157,14 +160,23 @@ The build script now automatically generates `output/preview.png` using:
 
 ### Testing Commands
 ```bash
-# Full build with automatic preview
+# Full build with automatic preview (for main template)
 ./build.sh
 
-# Manual compilation with preview generation
+# Manual compilation with preview generation (for main template)
 pdflatex -output-directory=output main.tex && magick convert -density 150 output/main.pdf[0] output/preview.png
 
-# Alternative with poppler
+# Alternative with poppler (for main template)
 pdflatex -output-directory=output main.tex && pdftoppm -png -singlefile -r 150 output/main.pdf output/preview
+
+# Chapter file compilation with preview (example for Isaiah 10:1-4)
+cd chapters/isaiah-10-1-4 && xelatex isaiah-10-1-4.tex && magick "isaiah-10-1-4.pdf[0]" preview.png
+
+# Workflow for compiling and previewing chapter files:
+# 1. Navigate to chapter directory (or use full path in commands)
+# 2. Compile with xelatex (creates PDF in same directory)
+# 3. Generate preview PNG with magick (use quotes around PDF path with [0])
+# 4. Use Read tool to view the preview.png
 ```
 
 **Critical**: Always use `Read` tool on the output .png file after making any template changes to verify the visual output matches expectations. The preview image provides immediate visual feedback that compilation logs cannot capture.

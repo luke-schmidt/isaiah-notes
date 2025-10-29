@@ -41,7 +41,9 @@
       "Bash(TEXINPUTS=temp-component-test: pdflatex -output-directory=temp-component-test temp-component-test/test-v3.tex)",
       "Bash(git checkout:*)",
       "Read(//Users/luke.schmidt/**)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)"
     ],
     "deny": []
   }
