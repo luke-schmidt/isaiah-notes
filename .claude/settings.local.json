@@ -43,7 +43,10 @@
       "Read(//Users/luke.schmidt/**)",
       "Bash(open:*)",
       "WebSearch",
-      "WebFetch(domain:en.wikipedia.org)"
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(TEXINPUTS=.: pdflatex:*)",
+      "Bash(TEXINPUTS=temp-component-test: pdflatex:*)",
+      "Bash(TEXINPUTS=.: xelatex:*)"
     ],
     "deny": []
   }

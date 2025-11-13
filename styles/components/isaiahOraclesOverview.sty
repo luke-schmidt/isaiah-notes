@@ -1,0 +1,187 @@
+% Isaiah Oracles Overview Component - Chapters 13-23
+% Creates a two-column layout with staggered boxes and central sign act box
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{isaiahOraclesOverview}[2025/10/29 Isaiah Oracles Overview - Classic Staggered]
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows,positioning}
+
+% Oracle overview command - Two-column staggered layout
+% Parameter: number 1-11 to highlight (1-5 left column, 6 center box, 7-11 right column)
+\newcommand{\isaiahOraclesOverview}[1]{%
+    \par\vspace{20pt}%
+    \noindent
+    \begin{tikzpicture}[
+        longbox/.style={draw=gray, line width=2pt, rounded corners=12pt, inner sep=10pt, fill=blue!5, drop shadow={opacity=0.3}, minimum height=1.8cm, text width=6cm, align=right},
+        shortbox/.style={draw=gray, line width=2pt, rounded corners=12pt, inner sep=10pt, fill=green!5, drop shadow={opacity=0.3}, minimum height=1.5cm, text width=5.5cm, align=right},
+        longboxright/.style={draw=gray, line width=2pt, rounded corners=12pt, inner sep=10pt, fill=blue!5, drop shadow={opacity=0.3}, minimum height=1.8cm, text width=6cm, align=left},
+        shortboxright/.style={draw=gray, line width=2pt, rounded corners=12pt, inner sep=10pt, fill=green!5, drop shadow={opacity=0.3}, minimum height=1.5cm, text width=5.5cm, align=left},
+        centerbox/.style={draw=gray, line width=3pt, rounded corners=15pt, inner sep=5pt, fill=yellow!10, drop shadow={opacity=0.3}, minimum height=2cm, text width=4cm, align=center},
+        longboxhighlight/.style={draw=black, line width=5pt, rounded corners=12pt, inner sep=10pt, fill=blue!5, drop shadow, minimum height=1.8cm, text width=6cm, align=right},
+        shortboxhighlight/.style={draw=black, line width=5pt, rounded corners=12pt, inner sep=10pt, fill=green!5, drop shadow, minimum height=1.5cm, text width=5.5cm, align=right},
+        longboxrighthighlight/.style={draw=black, line width=5pt, rounded corners=12pt, inner sep=10pt, fill=blue!5, drop shadow, minimum height=1.8cm, text width=6cm, align=left},
+        shortboxrighthighlight/.style={draw=black, line width=5pt, rounded corners=12pt, inner sep=10pt, fill=green!5, drop shadow, minimum height=1.5cm, text width=5.5cm, align=left},
+        centerboxhighlight/.style={draw=black, line width=6pt, rounded corners=15pt, inner sep=5pt, fill=yellow!10, drop shadow, minimum height=2cm, text width=4cm, align=center}
+    ]
+
+    % LEFT COLUMN (right-aligned boxes - all boxes align to same right edge)
+    % Long box 1 - rightmost position - Babylon (13:1-14:27)
+    \ifnum#1=1
+        \node[longboxhighlight, anchor=north east] (L1) at (7.5,0) {
+            \raggedleft
+            Oracle about \textbf{Babylon}\\
+            \small (13:1-14:27)
+        };
+    \else
+        \node[longbox, anchor=north east] (L1) at (7.5,0) {
+            \raggedleft
+            Oracle about \textbf{Babylon}\\
+            \small (13:1-14:27)
+        };
+    \fi
+
+    % Short box 2 - Philistia (14:28-32)
+    \ifnum#1=2
+        \node[shortboxhighlight, below=0.8cm of L1.south east, anchor=north east] (L2) {
+            \raggedleft
+            Oracle about \textbf{Philistia}\\
+            \small (14:28-32)
+        };
+    \else
+        \node[shortbox, below=0.8cm of L1.south east, anchor=north east] (L2) {
+            \raggedleft
+            Oracle about \textbf{Philistia}\\
+            \small (14:28-32)
+        };
+    \fi
+
+    % Long box 3 - Moab (15-16)
+    \ifnum#1=3
+        \node[longboxhighlight, below=0.8cm of L2.south east, anchor=north east] (L3) {
+            \raggedleft
+            Oracle about \textbf{Moab}\\
+            \small (15-16)
+        };
+    \else
+        \node[longbox, below=0.8cm of L2.south east, anchor=north east] (L3) {
+            \raggedleft
+            Oracle about \textbf{Moab}\\
+            \small (15-16)
+        };
+    \fi
+
+    % Short box 4 - Damascus (17-18)
+    \ifnum#1=4
+        \node[shortboxhighlight, below=0.8cm of L3.south east, anchor=north east] (L4) {
+            \raggedleft
+            Oracle about \textbf{Damascus}\\
+            \small (17-18)
+        };
+    \else
+        \node[shortbox, below=0.8cm of L3.south east, anchor=north east] (L4) {
+            \raggedleft
+            Oracle about \textbf{Damascus}\\
+            \small (17-18)
+        };
+    \fi
+
+    % Long box 5 - Egypt (19)
+    \ifnum#1=5
+        \node[longboxhighlight, below=0.8cm of L4.south east, anchor=north east] (L5) {
+            \raggedleft
+            Oracle about \textbf{Egypt}\\
+            \small (19)
+        };
+    \else
+        \node[longbox, below=0.8cm of L4.south east, anchor=north east] (L5) {
+            \raggedleft
+            Oracle about \textbf{Egypt}\\
+            \small (19)
+        };
+    \fi
+
+    % CENTER BOX (6) - Isaiah's Sign Act (20)
+    \ifnum#1=6
+        \node[centerboxhighlight] (CENTER) at (10,-6) {
+            \textbf{\large Isaiah's Sign Act}\\
+            \small (20)
+        };
+    \else
+        \node[centerbox] (CENTER) at (10,-6) {
+            \textbf{\large Isaiah's Sign Act}\\
+            \small (20)
+        };
+    \fi
+
+    % RIGHT COLUMN (left-aligned boxes - all boxes align to same left edge)
+    % Long box 7 - Babylon (21:1-10)
+    \ifnum#1=7
+        \node[longboxrighthighlight, anchor=north west] (R1) at (12.5,0) {
+            Oracle about \textbf{Babylon}\\
+            \small (21:1-10)
+        };
+    \else
+        \node[longboxright, anchor=north west] (R1) at (12.5,0) {
+            Oracle about \textbf{Babylon}\\
+            \small (21:1-10)
+        };
+    \fi
+
+    % Short box 8 - Dumah (21:11-12)
+    \ifnum#1=8
+        \node[shortboxrighthighlight, below=0.8cm of R1.south west, anchor=north west] (R2) {
+            Oracle about \textbf{Dumah}\\
+            \small (21:11-12)
+        };
+    \else
+        \node[shortboxright, below=0.8cm of R1.south west, anchor=north west] (R2) {
+            Oracle about \textbf{Dumah}\\
+            \small (21:11-12)
+        };
+    \fi
+
+    % Long box 9 - Qedar (21:13-17)
+    \ifnum#1=9
+        \node[longboxrighthighlight, below=0.8cm of R2.south west, anchor=north west] (R3) {
+            Oracle about \textbf{Qedar}\\
+            \small (21:13-17)
+        };
+    \else
+        \node[longboxright, below=0.8cm of R2.south west, anchor=north west] (R3) {
+            Oracle about \textbf{Qedar}\\
+            \small (21:13-17)
+        };
+    \fi
+
+    % Short box 10 - Valley of Vision (22)
+    \ifnum#1=10
+        \node[shortboxrighthighlight, below=0.8cm of R3.south west, anchor=north west] (R4) {
+            Oracle about \textbf{Valley of Vision}\\
+            \small (22)
+        };
+    \else
+        \node[shortboxright, below=0.8cm of R3.south west, anchor=north west] (R4) {
+            Oracle about \textbf{Valley of Vision}\\
+            \small (22)
+        };
+    \fi
+
+    % Long box 11 - Tyre (23)
+    \ifnum#1=11
+        \node[longboxrighthighlight, below=0.8cm of R4.south west, anchor=north west] (R5) {
+            Oracle about \textbf{Tyre}\\
+            \small (23)
+        };
+    \else
+        \node[longboxright, below=0.8cm of R4.south west, anchor=north west] (R5) {
+            Oracle about \textbf{Tyre}\\
+            \small (23)
+        };
+    \fi
+
+    \end{tikzpicture}
+    \par\vspace{20pt}%
+}
+
+\endinput

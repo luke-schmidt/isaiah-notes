@@ -1,0 +1,102 @@
+% Isaiah Study Timeline: Weeks 10-37
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontspec}
+\usepackage[most]{tcolorbox}
+
+% Color definitions
+\definecolor{sectioncolor}{RGB}{70, 130, 180}
+\definecolor{weekcolor}{RGB}{100, 100, 100}
+\definecolor{bordercolor}{RGB}{200, 200, 200}
+
+% Custom commands
+\newcommand{\timelineheader}[1]{%
+    \vspace{0.5em}
+    {\Large\bfseries\color{sectioncolor}#1}
+    \vspace{0.3em}
+    \par
+}
+
+\newcommand{\weekentry}[3]{%
+    \noindent\textbf{\color{weekcolor}Week #1 (#2):} #3
+    \par\vspace{0.25em}
+}
+
+\newcommand{\breakentry}[1]{%
+    \noindent\textbf{\color{red}#1}
+}
+
+\begin{document}
+
+\begin{center}
+    {\Huge\bfseries Isaiah Study Timeline}\\[0.5em]
+    {\Large Weeks 10--37}
+\end{center}
+
+
+% Weeks 10-16: Oracles Against Nations and Isaiah's Apocalypse
+\begin{tcolorbox}[
+    colback=white,
+    colframe=sectioncolor,
+    arc=3mm,
+    boxrule=1pt,
+    left=10pt,
+    right=10pt,
+    top=10pt,
+    bottom=10pt
+]
+\timelineheader{Weeks 10--16: Covering Isaiah 14:28--27}
+
+\weekentry{10}{Nov 5}{Isaiah 14:28--16:14 --- Philistia and Moab}
+\weekentry{11}{Nov 12}{Isaiah 17--18 --- Damascus and Ethiopia}
+\weekentry{12}{Nov 19}{Isaiah 19--20 --- Egypt and Sign Against Egypt/Ethiopia}
+\weekentry{13}{Nov 26}{Isaiah 21--22 --- Babylon, Dumah, Arabia, Valley of Vision}
+\weekentry{14}{Dec 3}{Isaiah 23--24 --- Tyre and Earth's Judgment}
+\weekentry{15}{Dec 10}{Isaiah 25--26 --- Victory Song and Song of Trust}
+\weekentry{16}{Dec 17}{Isaiah 27 --- Israel's Deliverance and Restoration}
+\end{tcolorbox}
+\vspace{.5em}
+\breakentry{Christmas Break: Dec 24 \& Dec 31}
+
+\vspace{.5em}
+% Weeks 17-37: Six Woes, Hezekiah, Second Isaiah, and Third Isaiah
+\begin{tcolorbox}[
+    colback=white,
+    colframe=sectioncolor,
+    arc=3mm,
+    boxrule=1pt,
+    left=10pt,
+    right=10pt,
+    top=10pt,
+    bottom=10pt
+]
+\timelineheader{Weeks 17--37: Covering Isaiah 28--66}
+
+\weekentry{17}{Jan 7}{Isaiah 28--29 --- Woe to Ephraim and Ariel}
+\weekentry{18}{Jan 14}{Isaiah 30--31 --- Woe to Obstinate Children/Those Who Rely on Egypt}
+\weekentry{19}{Jan 21}{Isaiah 32--33 --- Kingdom of Righteousness and Distress/Deliverance}
+\weekentry{20}{Jan 28}{Isaiah 34--35 --- Judgment on Nations and Joy of the Redeemed}
+\weekentry{21}{Feb 4}{Isaiah 36--37 --- Sennacherib Threatens Jerusalem, God Delivers}
+\weekentry{22}{Feb 11}{Isaiah 38--39 --- Hezekiah's Illness and Babylonian Envoys}
+\weekentry{23}{Feb 18}{Isaiah 40--41 --- Comfort, God's Greatness, Help for Israel}
+\weekentry{24}{Feb 25}{Isaiah 42--43 --- The Servant, Israel the Blind, Israel's Only Savior}
+\weekentry{25}{Mar 4}{Isaiah 44--45 --- Israel Chosen, Cyrus God's Instrument}
+\weekentry{26}{Mar 11}{Isaiah 46--47 --- Gods of Babylon vs. God of Israel, Babylon's Fall}
+\weekentry{27}{Mar 18}{Isaiah 48--49 --- Stubborn Israel, Servant to Restore Israel}
+\weekentry{28}{Mar 25}{Isaiah 50--51 --- Israel's Sin/Servant's Obedience, Salvation for Zion}
+\weekentry{29}{Apr 1}{Isaiah 52--53 --- Good News of Salvation, Suffering Servant}
+\weekentry{30}{Apr 8}{Isaiah 54--55 --- Future Glory of Zion, Invitation to the Thirsty}
+\weekentry{31}{Apr 15}{Review/Catch-up Week}
+\weekentry{32}{Apr 22}{Isaiah 56--57 --- Salvation for Others, Comfort for the Contrite}
+\weekentry{33}{Apr 29}{Isaiah 58--59 --- True and False Worship, Sin and Redemption}
+\weekentry{34}{May 6}{Isaiah 60--61 --- Glory of Zion, Year of the Lord's Favor}
+\weekentry{35}{May 13}{Isaiah 62--63 --- Zion's New Name, God's Day of Vengeance}
+\weekentry{36}{May 20}{Isaiah 64--65 --- Prayer for Help, Judgment and Salvation}
+\weekentry{37}{May 27}{Isaiah 66 --- Judgment and Hope, Final Vision}
+\end{tcolorbox}
+
+\end{document}
